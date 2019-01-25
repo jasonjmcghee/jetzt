@@ -233,12 +233,12 @@
 
     this.started = false;
 
-    this.setWord = function (token, dec) {
+    this.setWord = function (token, instr) {
       var pivot = calculatePivot(token.replace(/[?.,!:;*-]+$/, ""));
       leftWord.innerHTML = token.substr(0, pivot);
       pivotChar.innerHTML = token.substr(pivot, 1);
       rightWord.innerHTML = token.substr(pivot + 1)
-      if (typeof dec !== "undefined") decorator.innerHTML = dec;
+      if (typeof instr.decorator !== "undefined") decorator.innerHTML = dec;
 
       word.offsetWidth;
       var pivotCenter = reticle.offsetLeft + (reticle.offsetWidth / 2);

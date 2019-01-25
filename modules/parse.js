@@ -245,6 +245,11 @@
             break;
           case "#comment":
             break;
+          case "FIGURE":
+            if (!window.figures) {
+                window.figures = [];
+            }
+            window.figures.push(node);
           default:
             parseDom(node,inst);
         }
